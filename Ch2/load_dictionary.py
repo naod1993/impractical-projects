@@ -1,3 +1,14 @@
+""""
+Arguments:
+- text file name (and discovery path, if needed)
+
+Exceptions:
+- IOError if filename not found
+
+Retruns:
+- A list of all words in a text file in lower case
+"""
+
 import sys
 
 def load_file(file):
@@ -9,3 +20,5 @@ def load_file(file):
     except IOError as e:
         print("{}\nError opening {}.Terminating program.".format(e,file),file=sys.stderr)
     sys.exit(1)
+
+
